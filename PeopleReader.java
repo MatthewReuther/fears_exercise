@@ -8,7 +8,6 @@ public class PeopleReader {
     private String filename;
 
     public PeopleReader(String filename) {
-        super();
         this.filename = filename;
     }
 
@@ -37,8 +36,8 @@ public class PeopleReader {
 
             int fearIndex = ageIndex + 1;
             String fear = (parts.length == fearIndex + 1)
-                ? parts[fearIndex]
-                : parts[fearIndex] + " " + parts[fearIndex+1];
+                    ? parts[fearIndex]
+                    : parts[fearIndex] + " " + parts[fearIndex + 1];
 
             people.add(new Person(firstName, lastName, middleName, age, fear));
         }

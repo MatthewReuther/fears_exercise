@@ -1,0 +1,26 @@
+@startuml
+title Fears Class Diagram
+
+class App {
+    + {static} main(String[]) : void
+    + {static} groupByFear(List<Person>) : Map<String, List<Person>>
+}
+
+class Person {
+    - firstName : String
+    - lastName : String
+    - middleName : String
+    - age : int
+
+    + toString() : String
+}
+
+class PersonReader {
+    - filename : String
+
+    + getAllPeople() : List<Person>
+}
+
+PersonReader *-- App
+Person o-- PersonReader
+@enduml
