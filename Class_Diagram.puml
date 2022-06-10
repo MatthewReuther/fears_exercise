@@ -11,6 +11,7 @@ class Person {
     - lastName : String
     - middleName : String
     - age : int
+    - fear : String
 
     + toString() : String
 }
